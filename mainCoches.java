@@ -1,10 +1,16 @@
+import java.util.Scanner;
 class mainCoches
 {
+	Scanner input = new Scanner( System.in );
 	public static void main(String[] args)
 	{
-		int tamano = 10;
+		// Pide el numero de coches a crear
+		System.out.pirntln( "Introduce el numero de coches que quieres crear." );
+		int tamano = input.nextInt();
+
 		String control;
-		int i = -1;
+		int i;
+
 
 		// Se crea un array "coche" de tamaño "tamano"
 		Coche[] coche = new coche[ tamano ];
