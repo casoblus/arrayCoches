@@ -1,11 +1,11 @@
 import java.util.Scanner;
 class mainCoches
 {
-	Scanner input = new Scanner( System.in );
 	public static void main(String[] args)
 	{
+		Scanner input = new Scanner( System.in );
 		// Pide el numero de coches a crear
-		System.out.pirntln( "Introduce el numero de coches que quieres crear." );
+		System.out.println( "Introduce el numero de coches que quieres crear." );
 		int tamano = input.nextInt();
 
 		String control;
@@ -28,32 +28,32 @@ class mainCoches
 			i++;
 
 			// Se crea un objeto coche
-			Coche coche[i] = new Coche();
+			coche[i] = new Coche();
 				
 			System.out.println( "Marca: " );	
-				marca = sc.nextLine();
+				marca = input.nextLine();
 			
 			System.out.println( "Modelo: " );	
-				modelo = sc.nextLine();
+				modelo = input.nextLine();
 			
 			System.out.println( "Color: " );	
-				color = sc.nextLine();
+				color = input.nextLine();
 			
 			System.out.println( "Consumo: " );	
-				consumo = sc.nextFloat();
+				consumo = input.nextFloat();
 			
 			System.out.println( "Combustible: " );	
-				combustible = sc.nextFloat();
+				combustible = input.nextFloat();
 			
 			System.out.println( "km: " );
-				km = sc.nextFloat();
+				km = input.nextFloat();
 			// Se inicializan los atributos de coche[i]
 			// En esta variante, los datos se le envían al método ALTA.
 			coche[i].ALTA( marca, modelo, color, consumo, combustible, km );
 
 			// Control para salir
 			System.out.println( "Escriba \"fin\" para terminar." );
-			control = entrada.nextLine();
+			control = input.nextLine();
 
 		} while( i < tamano - 1  || !control.equals("fin") );
 	}
