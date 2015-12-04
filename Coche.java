@@ -11,28 +11,22 @@ class Coche
 
 	// Constructor de clase. 
 	// Inicializa los atributos del objeto.
-	public void ALTA() 
+	public void ALTA( String _marca,
+			  String _modelo,
+			  String _color,
+			  float _consumo,
+			  float _combustible,
+			  float _km ) 
 	{
-		// Solicita los valores al usuario 
-		// y los asigna a sus atributos
+		// asigna los valores recibidos
+		// a sus atributos
 		
-		System.out.println( "Marca: " );	
-			marca = sc.nextLine();
-		
-		System.out.println( "Modelo: " );	
-			modelo = sc.nextLine();
-		
-		System.out.println( "Color: " );	
-			color = sc.nextLine();
-		
-		System.out.println( "Consumo: " );	
-			consumo = sc.nextFloat();
-		
-		System.out.println( "Combustible: " );	
-			combustible = sc.nextFloat();
-		
-		System.out.println( "km: " );
-			km = sc.nextFloat();
+			marca = _marca;
+			modelo = _modelo;
+			color = _color;
+			consumo = _consumo;
+			combustible = _combustible; 
+			km = _km;
 	}
 
 	public void MOSTRAR_ATRIBUTOS()
