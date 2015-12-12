@@ -1,34 +1,81 @@
 import java.util.Scanner;
 class mainCoches
 {
-	Scanner input = new Scanner( System.in );
 	public static void main(String[] args)
 	{
+		Scanner input = new Scanner( System.in );
 		// Pide el numero de coches a crear
-		System.out.pirntln( "Introduce el numero de coches que quieres crear." );
+		System.out.println( "Introduce el numero de coches que quieres crear." );
 		int tamano = input.nextInt();
 
-		String control;
-		int i;
+		String control; // Guarda la opcion elegida por el usuario
+		
+		// recojo la basura del buffer. 
+		// La proxima vez se sobreescribirá la variable
+		// de modo que no hago otra.
+		control = input.nextLine();
 
+		int i = -1;
+		int n_coches = 0; // Contador de coches
+		
 
 		// Se crea un array "coche" de tamaño "tamano"
-		Coche[] coche = new coche[ tamano ];
+		Coche[] coche = new Coche[ tamano ];
 
 		do {
+			// Muestra el menu de opciones disponibles
 
-			i++;
+			System.out.println( "\t----- MENURE -----" );
+			System.out.println( "\t\t[a] Dar de alta nuevo Coche. " );
+			System.out.println( "\t\t[s] Mostrar datos de un Coche." );
+			System.out.println( "\t\t[t] Mostrar los datos de todos los vehículos dados de alta." );
+			System.out.println( "\t\t[n] Ver el numero de coches." );
+			System.out.println( "\t\t[q] Salir." );
+			System.out.println( "\t----- ---- -----" );
+			System.out.println( "" ); // linea en blanco
 
-			// Se crea un objeto coche
-			Coche coche[i] = new Coche();
+			System.out.println( "Elije un opcion >>>" ); 
+			control = input.nextLine();
+			
+			switch( control ) 
+			{
+				case "a":
+					i++;
+					if ( i < tamano )
+					{
+						// Se crea un objeto coche
+						coche[i] = new Coche();
 
-			// Se inicializan los atributos de coche[i]
-			coche[i].ALTA();
+						// Se inicializan los atributos de coche[i]
+						coche[i].ALTA();
+						n_coches++; // */
 
-			// Control para salir
-			System.out.println( "Escriba \"fin\" para terminar." );
-			control = entrada.nextLine();
-
-		} while( i < tamano - 1  || !control.equals("fin") );
+						// n_coches += coche[i].ALTA(); // Coche[i].ALTA() retorna 1 si se ejecuta correctamente.
+					} else {
+						System.out.println( "\tARRAY LLENO!" );
+					}
+					break;
+				case "s":
+					break;
+				case "t":
+					break;
+				case "n":
+					break;
+				case "q":
+					break;
+				case "cow": //  La vaca XD 
+					System.out.println( "          (__)" );
+					System.out.println( "          |OO|" );
+					System.out.println( " /--------\\_/" );
+					System.out.println( "/ \\       /     MOOOOOOOOOOO!!" );
+					System.out.println( "   |W-----|" );
+					System.out.println( "   |      | " );
+					System.out.println( "#################################" );
+					break;
+				default:
+					System.out.println( "OPCION INCORRECTA!" );
+					break;
+			}
+		} while( !control.equals("q") );
 	}
 }
