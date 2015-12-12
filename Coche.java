@@ -52,8 +52,10 @@ class Coche
 		// Recorro el array coche desde 0 hasta n_coches e imprimo sus atributos.
 		for( int i = 0; i < n_coches; i++ )
 		{
-			System.out.println( "\tEl coche es un " + coche[i].marca + " " + coche[i].modelo + " de color " + coche[i].color + ".");
+			System.out.println( "------------------------------------------------------------------------------------------------------");
+			System.out.println( "\tEl coche "+i+" es un " + coche[i].marca + " " + coche[i].modelo + " de color " + coche[i].color + ".");
 			System.out.println( "\tTiene un consumo de " + coche[i].consumo + " litros, " + coche[i].km + " kilometros y " + coche[i].combustible + " litros de combustible en el deposito." );
+			System.out.println( "------------------------------------------------------------------------------------------------------");
 		}
 	}
 }

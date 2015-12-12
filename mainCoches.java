@@ -62,7 +62,7 @@ class mainCoches
 					int id = input.nextInt();
 					// Limpio el buffer
 					control = input.nextLine();
-					if( id >= 0 && id <= i )
+					if( id >= 0 && id < n_coches )
 					{
 						coche[id].MOSTRAR_ATRIBUTOS();	
 					} else {
@@ -70,6 +70,16 @@ class mainCoches
 					}
 					break;
 				case "t":
+					// Datos de todos los coches
+					// Comprueba que existe al menos un coche
+					if(n_coches > 0)
+					{
+					// ejecutamos el metodo VER_TODOS() de cualquier objeto coche del array
+					// Le pasamos el array de coches y cuantos coches hay 
+						coche[n_coches-1].VER_TODOS( coche, n_coches);
+					} else {
+						System.out.println("No hay coches que mostrar.");
+					}
 					break;
 				case "n":
 					break;
