@@ -20,7 +20,7 @@ class Persona
 			dni = input.nextLine();
 	}
 
-	public VER_DATOS() 
+	public void VER_DATOS() 
 	{
 		System.out.println( "NOME: " + nome );
 		System.out.println( "APELIDOS: " +apelidos );

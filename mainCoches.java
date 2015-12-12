@@ -8,6 +8,9 @@ class mainCoches
 		System.out.println( "Introduce el numero de coches que quieres crear." );
 		int tamano = input.nextInt();
 
+		System.out.println( "Introduce tamaño del array de propietarios. " );
+		int t_prop = input.nextInt();
+
 		String control; // Guarda la opcion elegida por el usuario
 		
 		// recojo la basura del buffer. 
@@ -15,12 +18,13 @@ class mainCoches
 		// de modo que no hago otra.
 		control = input.nextLine();
 
-		int i = -1;
+		int i = -1, p = 0;
 		int n_coches = 0; // Contador de coches
 		
 
 		// Se crea un array "coche" de tamaño "tamano"
 		Coche[] coche = new Coche[ tamano ];
+		Persona[] propietario = new Persona[ t_prop ];
 
 		do {
 			// Muestra el menu de opciones disponibles
@@ -28,6 +32,7 @@ class mainCoches
 			System.out.println( "" ); // linea en blanco
 			System.out.println( "\t----- MENURE -----" );
 			System.out.println( "\t\t[a] Dar de alta nuevo Coche. " );
+			System.out.println( "\t\t[p] Dar de alta un nuevo propietario." );
 			System.out.println( "\t\t[s] Mostrar datos de un Coche." );
 			System.out.println( "\t\t[t] Mostrar los datos de todos los vehículos dados de alta." );
 			System.out.println( "\t\t[n] Ver el numero de coches." );
@@ -85,11 +90,22 @@ class mainCoches
 					// Muestra el numero de coches
 					System.out.println( "Hay "+n_coches+" coches dados de alta en el array." );
 					break;
+				case "p":
+					if( p < t_prop )
+					{
+						propietario[p] = new Persona();
+						propietario[p].ALTA();
+						p++;
+					} else {
+						// No se pueden crear mas propietarios
+						System.out.println( "Array de propietarios lleno. ");
+					}
+					break;
 				case "q":
 					break;
 				case "cow": //  La vaca XD 
 					System.out.println( "          (__)" );
-					System.out.println( "          |OO|" );
+					System.out.println( "         |O O|" );
 					System.out.println( " /--------\\_/" );
 					System.out.println( "/ \\       /     MOOOOOOOOOOO!!" );
 					System.out.println( "   |W-----|" );
