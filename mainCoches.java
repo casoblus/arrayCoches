@@ -25,6 +25,7 @@ class mainCoches
 		do {
 			// Muestra el menu de opciones disponibles
 
+			System.out.println( "" ); // linea en blanco
 			System.out.println( "\t----- MENURE -----" );
 			System.out.println( "\t\t[a] Dar de alta nuevo Coche. " );
 			System.out.println( "\t\t[s] Mostrar datos de un Coche." );
@@ -56,6 +57,17 @@ class mainCoches
 					}
 					break;
 				case "s":
+					// De que coche?
+					System.out.println( "De que coche quieres ver los datos?" );
+					int id = input.nextInt();
+					// Limpio el buffer
+					control = input.nextLine();
+					if( id >= 0 && id <= i )
+					{
+						coche[id].MOSTRAR_ATRIBUTOS();	
+					} else {
+						System.out.println( "El valor "+id+" no existe en la coleccion." );
+					}
 					break;
 				case "t":
 					break;

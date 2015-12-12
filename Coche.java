@@ -42,8 +42,8 @@ class Coche
 	//Muestra los atributos del objeto actual
 	public void MOSTRAR_ATRIBUTOS()
 	{
-		System.out.println( "\tEl coche es un" + marca + " " + modelo + ", de color " + color + ".");
-		System.out.println( "\tTiene un consumo de " + consumo + " cada 100km, " + km + " kilometros y " + combustible + " litros de combustible." );
+		System.out.println( "\tEl coche es un " + marca + " " + modelo + " de color " + color + ".");
+		System.out.println( "\tTiene un consumo de " + consumo + " litros, " + km + " kilometros y " + combustible + " litros de combustible en el deposito." );
 	}
 	
 	// Muestra los atributos de todos los objetos coche contenidos en el array coche
@@ -52,8 +52,8 @@ class Coche
 		// Recorro el array coche desde 0 hasta n_coches e imprimo sus atributos.
 		for( int i = 0; i < n_coches; i++ )
 		{
-			System.out.println( "\tEl coche es un" + coche[i].marca + " " + coche[i].modelo + ", de color " + coche[i].color + ".");
-			System.out.println( "\tTiene un consumo de " + coche[i].consumo + " cada 100km, " + coche[i].km + " kilometros y " + coche[i].combustible + " litros de combustible." );
+			System.out.println( "\tEl coche es un " + coche[i].marca + " " + coche[i].modelo + " de color " + coche[i].color + ".");
+			System.out.println( "\tTiene un consumo de " + coche[i].consumo + " litros, " + coche[i].km + " kilometros y " + coche[i].combustible + " litros de combustible en el deposito." );
 		}
 	}
 }
