@@ -82,6 +82,8 @@ class mainCoches
 					}
 					break;
 				case "n":
+					// Muestra el numero de coches
+					System.out.println( "Hay "+n_coches+" coches dados de alta en el array." );
 					break;
 				case "q":
 					break;
