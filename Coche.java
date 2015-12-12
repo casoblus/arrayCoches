@@ -11,6 +11,7 @@ class Coche
 	public float consumo;
 	public float combustible;
 	public float km;
+	public int matricula;
 	Scanner sc = new Scanner( System.in );
 
 	// Constructor de clase. 
@@ -29,14 +30,17 @@ class Coche
 		System.out.println( "Color: " );	
 			color = sc.nextLine();
 		
-		System.out.println( "Consumo: " );	
+		System.out.println( "Consumo: (float)" );	
 			consumo = sc.nextFloat();
 		
-		System.out.println( "Combustible: " );	
+		System.out.println( "Combustible: (float)" );	
 			combustible = sc.nextFloat();
 		
-		System.out.println( "km: " );
+		System.out.println( "km: (float)" );
 			km = sc.nextFloat();
+		
+		System.out.println( "Matricula: (entero) " );
+			km = sc.nextInt();
 	}
 
 	//Muestra los atributos del objeto actual
